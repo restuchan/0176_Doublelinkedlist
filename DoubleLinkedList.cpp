@@ -126,4 +126,28 @@ class DoubleLinkedList
        cout << "Record with roll number " << rollNo << " deleted" << endl;
    }
 
-   
+   void traverse()
+   {
+       if (START == NULL)
+       {
+        cout << "\nList is empty" << endl;
+        return;
+       }
+
+       //step 1: mark first node as current node
+       Node *currentNode = START;
+       //step 2: Repeat until currentNode == NULL
+       cout << "\nRecords in ascending order of roll number are:\n";
+       int i = 0;
+       while (currentNode != NULL)
+       {
+        cout << 1 + 1 << ". " << currentNode->noMhs << " " << endl;
+        //step 3: move to the next node 
+        currentNode = currentNode->next;
+        i++;
+       }
+   }
+
+}; 
+
+
